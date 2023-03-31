@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: azure;
+    font-family: 'Lato', sans-serif;
+    --secondary: #00aaff;
+    --primary: #ff8800;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+a i {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+ul,
+ol {
+    margin-left: 1rem;
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Header */
+
+
+.header.blured {
+    backdrop-filter: blur(15px);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+
+.left .label h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.left .label h3 {
+    display: flex;
+    font-size: 12px;
+    color: var(--secondary);
+    gap: 5px;
+    word-spacing: 2.5px;
+}
+
+
+.header .right .navbar .nav__list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+/* Header */
+
+
+
+
+
+
+
+
+
+
+
+/* Main */
+
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0)), url(./Images/bgmi-poster.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* overflow-y: hidden; */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.section .section-heading {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    color: var(--secondary);
+    border-bottom: 3px solid transparent;
+    width: fit-content;
+    transition: .3s ease;
+    cursor: pointer;
+
+}
+
+.section .section-heading:hover {
+    border-bottom: 3px solid var(--primary);
+
+}
+
+.section .section-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.section.hero {
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    padding-top: 120px;
+}
+
+.section.hero .section-body {
+    justify-content: center;
+}
+
+.section-body .hero-card {
+    max-width: 750px;
+    display: flex;
+    padding: 1rem;
+    gap: 2.5rem;
+
+}
+
+.hero-card .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-card .left .paragraphs {
+    text-align: center;
+    padding: .5rem;
+    flex: 1;
+}
+
+.hero-card .left .action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1.5rem;
+    gap: 1rem;
+    flex: 1;
+}
+
+.action-btns .btn {
+    background: #ffffff72;
+    border-radius: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.action-btns .btn a {
+    display: block;
+    padding: 1rem 2rem;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+
+.action-btns .btn #register-btn {
+    background: -webkit-linear-gradient(55deg, #f55b08, #fda334);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.action-btns .btn #rules-btn {
+    background: linear-gradient(55deg, #00aaff, #0400ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-card .right {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(145deg, #d44d4b, #2d7b9d);
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.hero-card .right .logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-card .right .logo img {
+    transform: scale(2.2) translate(-10px, 3px);
+    filter: drop-shadow(5px 5px 5px #222);
+    animation: animate 8s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: scale(2.2) translate(-10px, 3px);
+    }
+
+    30% {
+        transform: scale(2.2) translate(-10px, -3px);
+    }
+}
+
+
+
+.section .section-heading {
+    align-self: center;
+}
+
+.section .section-body {
+    font-size: 1.2rem;
+}
+
+.section-body .points-tabel,
+.section-body .rounds {
+    padding: 1rem;
+}
+
+.section-body .points-tabel h3,
+.section-body .rounds h3 {
+    color: var(--primary);
+}
+
+.section-body .points-tabel table {
+    margin: .5rem 0;
+    border: 1px solid white;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.section-body p {
+    text-align: center;
+}
+
+.section-body li {
+    margin: .5rem 0;
+}
+
+/* Main */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(./Images/bgmi-poster.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+/* Footer */
+
+
+
+
+
+@media screen and (max-width:900px) {
+
+    .section-body .hero-card {
+        flex-direction: column-reverse;
+
+    }
+
+    .hero-card .right {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media screen and (max-width:500px) {
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
