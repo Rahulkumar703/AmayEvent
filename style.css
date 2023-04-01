@@ -67,6 +67,12 @@ th {
     text-align: center;
 }
 
+::selection {
+    background: #bee9ff;
+    color: var(--primary);
+    text-shadow: 1px 1px 1px black;
+}
+
 
 
 
@@ -137,7 +143,7 @@ th {
 
 
 main {
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -180,7 +186,7 @@ main {
 
 .section.hero {
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100svh;
     align-items: center;
     padding-top: 120px;
 }
@@ -219,10 +225,21 @@ main {
 }
 
 .action-btns .btn {
-    background: #ffffff72;
+    background: #b2b2b272;
     border-radius: 2rem;
     width: 100%;
     text-align: center;
+}
+
+.action-btns .btn:hover {
+    background: var(--primary);
+}
+
+.action-btns .btn:hover #register-btn {
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -316,6 +333,18 @@ main {
 
 .section-body li {
     margin: .5rem 0;
+}
+
+.section.contact .section-body {
+    gap: .5rem;
+}
+
+.section.contact a:hover:last-child i {
+    color: #25d366;
+}
+
+.section.contact a:hover:first-child i {
+    color: var(--secondary);
 }
 
 /* Main */
